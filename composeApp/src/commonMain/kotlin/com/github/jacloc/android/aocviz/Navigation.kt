@@ -12,7 +12,7 @@ import androidx.navigation.createGraph
 import com.github.jacloc.android.aocviz.ui.screens.calendar.CalendarScreen
 import com.github.jacloc.android.aocviz.ui.screens.days.DayScreen
 import com.github.jacloc.android.aocviz.viewmodel.CalendarViewModel
-import com.github.jacloc.android.aocviz.viewmodel.DayViewModel
+import com.github.jacloc.android.aocviz.viewmodel.SolutionViewModel
 import kotlinx.serialization.Serializable
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
@@ -40,10 +40,10 @@ fun NavigationComponent(
                 )
             }
             composable<DayRoute> {
-                val dayViewModel = koinViewModel<DayViewModel>(
+                val solutionViewModel = koinViewModel<SolutionViewModel>(
                     parameters = { parametersOf(it.savedStateHandle) }
                 )
-                DayScreen(dayViewModel = dayViewModel)
+                DayScreen(solutionViewModel = solutionViewModel)
             }
         }
     NavHost(

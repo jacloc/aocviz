@@ -61,6 +61,8 @@ kotlin {
             implementation(libs.koin.composeVM)
 
             implementation(libs.kotlinx.serialization.json)
+
+            implementation(libs.composecalendar)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

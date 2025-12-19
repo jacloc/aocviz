@@ -1,10 +1,9 @@
 package com.github.jacloc.weddingapp.di
 
-import com.github.jacloc.android.aocviz.DayRoute
 import com.github.jacloc.android.aocviz.viewmodel.CalendarViewModel
-import com.github.jacloc.android.aocviz.viewmodel.DayViewModel
-import com.github.jacloc.android.aocviz.viewmodel.features.DayFeature
-import com.github.jacloc.android.aocviz.viewmodel.features.DayFeature01
+import com.github.jacloc.android.aocviz.viewmodel.SolutionViewModel
+import com.github.jacloc.android.aocviz.viewmodel.features.Solution
+import com.github.jacloc.android.aocviz.viewmodel.features.solution01.Solution01
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModel
@@ -33,20 +32,20 @@ val sharedModule: Module get() = module {
     //Repository
 //    singleOf(::AppContentRepository)
 
-    // Feature/ViewModel
+    // ViewModel
     viewModelOf(::CalendarViewModel)
     viewModel {
-        DayViewModel(
+        SolutionViewModel(
             get(),
             get()
         )
     }
 
-    singleOf(::DayFeature01)
-
-    single<Map<Int, DayFeature>> {
+    // Features (days)
+    singleOf(::Solution01)
+    single<Map<Int, Solution>> {
         mapOf(
-            1 to get<DayFeature01>(),
+            1 to get<Solution01>(),
         )
     }
 }

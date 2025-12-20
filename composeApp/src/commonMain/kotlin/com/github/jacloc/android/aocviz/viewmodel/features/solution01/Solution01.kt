@@ -2,17 +2,12 @@ package com.github.jacloc.android.aocviz.viewmodel.features.solution01
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -24,14 +19,16 @@ import com.github.jacloc.android.aocviz.viewmodel.features.inputs.Solution01Inpu
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 class Solution01 : Solution() {
     @VisibleForTesting
     var part1Input = Solution01Input.part1
 
+    @VisibleForTesting
+    var part2Input = Solution01Input.part2
+
     override fun solvePart1(): String {
-        val turnCommands = parseTurnCommands()
+        val turnCommands = parseTurnCommands(part1Input)
 
         val dial = Dial()
         turnCommands.forEach {
@@ -41,12 +38,12 @@ class Solution01 : Solution() {
         return dial.timesHitZero.toString()
     }
 
-    private fun parseTurnCommands() = part1Input.split("\n").map { line ->
+    private fun parseTurnCommands(input: String) = input.split("\n").map { line ->
         line.parseTurnCommand()
     }
 
     override val part1SimulationFlow: Flow<SolutionUiState> = flow {
-        val commands = parseTurnCommands()
+        val commands = parseTurnCommands(part1Input)
         val dial = Dial()
 
         emit(
@@ -96,6 +93,13 @@ class Solution01 : Solution() {
     }
 
     override fun solvePart2(): String {
-        return "Test2"
+        val turnCommands = parseTurnCommands(part2Input)
+
+        val dial = Dial()
+        turnCommands.forEach {
+            dial.executeTurnCommand(it)
+        }
+
+        return (dial.timesHitZero + dial.timesPassedZero).toString()
     }
 }

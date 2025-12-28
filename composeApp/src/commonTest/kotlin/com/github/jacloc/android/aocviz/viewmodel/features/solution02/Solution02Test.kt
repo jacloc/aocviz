@@ -22,6 +22,22 @@ class Solution02Test {
     fun testSolvePart1Actual() {
         val solution02 = Solution02()
         val result = solution02.solvePart1()
-        assertEquals("???", result)
+        assertEquals("18893502033", result)
+    }
+
+    @Test
+    fun testSolvePart2Example() {
+        val solution02 = Solution02().apply {
+            part2Input = """
+                11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124
+            """.trimIndent()
+        }
+        val result = solution02.solvePart2()
+        assertEquals("4174379265", result)
+    }
+
+    @Test
+    fun testSolvePart2Actual() {
+
     }
 }

@@ -29,7 +29,7 @@ class Dial() {
             }
         } else if (position >= 100) {
             position -= 100
-            if (prevPosition != 0) {
+            if (position != 0 && prevPosition != 0) {
                 timesPassedZero++
             }
         }

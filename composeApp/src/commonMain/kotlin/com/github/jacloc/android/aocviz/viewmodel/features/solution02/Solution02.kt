@@ -8,6 +8,9 @@ class Solution02 : Solution() {
     @VisibleForTesting
     var part1Input = Solution02Input.part1
 
+    @VisibleForTesting
+    var part2Input = Solution02Input.part2
+
     override fun solvePart1(): String {
         val productIdRanges = parseProductIdRanges(part1Input)
         val counter = InvalidProductIdCounter()

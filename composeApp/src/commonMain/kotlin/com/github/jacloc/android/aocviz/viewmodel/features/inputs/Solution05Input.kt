@@ -1196,4 +1196,6 @@ object Solution05Input {
         334350308080049
         336345689077552
     """.trimIndent()
+
+    val part2 = part1
 }

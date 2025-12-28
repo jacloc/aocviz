@@ -23,6 +23,16 @@ class Solution03Test {
     fun testSolvePart1Actual() {
         val solution03 = Solution03()
         val result = solution03.solvePart1()
-        assertEquals("???", result)
+        assertEquals("17405", result)
+    }
+
+    @Test
+    fun testSolvePart2Example() {
+
+    }
+
+    @Test
+    fun testSolvePart2Actual() {
+
     }
 }

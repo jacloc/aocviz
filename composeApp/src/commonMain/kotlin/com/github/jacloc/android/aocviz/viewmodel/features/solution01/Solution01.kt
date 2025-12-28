@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.github.jacloc.android.aocviz.ui.components.DialComponent
 import com.github.jacloc.android.aocviz.viewmodel.features.Solution
 import com.github.jacloc.android.aocviz.viewmodel.features.SolutionUiState
-import com.github.jacloc.android.aocviz.viewmodel.features.inputs.Solution01Input
+import com.github.jacloc.android.aocviz.viewmodel.features.solution01.Solution01Input
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

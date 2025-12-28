@@ -1,4 +1,4 @@
-package com.github.jacloc.android.aocviz.viewmodel.features.inputs
+package com.github.jacloc.android.aocviz.viewmodel.features.solution04
 
 object Solution04Input {
     val part1 = """

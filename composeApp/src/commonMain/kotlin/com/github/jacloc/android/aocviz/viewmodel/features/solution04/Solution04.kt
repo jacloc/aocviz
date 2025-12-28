@@ -2,7 +2,7 @@ package com.github.jacloc.android.aocviz.viewmodel.features.solution04
 
 import androidx.annotation.VisibleForTesting
 import com.github.jacloc.android.aocviz.viewmodel.features.Solution
-import com.github.jacloc.android.aocviz.viewmodel.features.inputs.Solution04Input
+import com.github.jacloc.android.aocviz.viewmodel.features.solution04.Solution04Input
 
 class Solution04 : Solution() {
     @VisibleForTesting

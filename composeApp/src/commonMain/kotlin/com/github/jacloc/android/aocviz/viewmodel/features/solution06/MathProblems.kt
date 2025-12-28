@@ -3,9 +3,7 @@ package com.github.jacloc.android.aocviz.viewmodel.features.solution06
 object MathProblems {
     fun parse(input: String): List<MathProblem> {
         val lines = input.split("\n")
-
         val operators = lines.last().splitWhitespace()
-        println(operators)
 
         val problemMap = mutableMapOf<Int, MathProblem>()
         for (row in 0 until lines.lastIndex) {

@@ -36,7 +36,7 @@ class DialTest {
         )
         assertEquals(0, dial.position)
         assertEquals(1, dial.timesHitZero)
-        assertEquals(2, dial.timesPassedZero)
+        assertEquals(1, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -46,7 +46,7 @@ class DialTest {
         )
         assertEquals(95, dial.position)
         assertEquals(1, dial.timesHitZero)
-        assertEquals(2, dial.timesPassedZero)
+        assertEquals(1, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -56,7 +56,7 @@ class DialTest {
         )
         assertEquals(55, dial.position)
         assertEquals(1, dial.timesHitZero)
-        assertEquals(3, dial.timesPassedZero)
+        assertEquals(2, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -66,7 +66,7 @@ class DialTest {
         )
         assertEquals(0, dial.position)
         assertEquals(2, dial.timesHitZero)
-        assertEquals(3, dial.timesPassedZero)
+        assertEquals(2, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -76,7 +76,7 @@ class DialTest {
         )
         assertEquals(99, dial.position)
         assertEquals(2, dial.timesHitZero)
-        assertEquals(3, dial.timesPassedZero)
+        assertEquals(2, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -86,7 +86,7 @@ class DialTest {
         )
         assertEquals(0, dial.position)
         assertEquals(3, dial.timesHitZero)
-        assertEquals(3, dial.timesPassedZero)
+        assertEquals(2, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -96,7 +96,7 @@ class DialTest {
         )
         assertEquals(14, dial.position)
         assertEquals(3, dial.timesHitZero)
-        assertEquals(3, dial.timesPassedZero)
+        assertEquals(2, dial.timesPassedZero)
 
         dial.executeTurnCommand(
             TurnCommand(
@@ -106,6 +106,6 @@ class DialTest {
         )
         assertEquals(32, dial.position)
         assertEquals(3, dial.timesHitZero)
-        assertEquals(4, dial.timesPassedZero)
+        assertEquals(3, dial.timesPassedZero)
     }
 }

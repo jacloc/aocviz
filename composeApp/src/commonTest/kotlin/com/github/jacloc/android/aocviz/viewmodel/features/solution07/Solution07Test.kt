@@ -34,6 +34,6 @@ class Solution07Test {
     fun testSolvePart1Actual() {
         val solution07 = Solution07()
         val result = solution07.solvePart1()
-        assertEquals("???", result)
+        assertEquals("1667", result)
     }
 }
